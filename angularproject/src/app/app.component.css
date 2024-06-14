@@ -1,0 +1,19 @@
+.navbar.custom-navbar {
+  background-color: #890e54ff !important;
+  color: white !important;
+}
+
+.navbar.custom-navbar .navbar-nav .nav-link {
+  color: white !important;
+}
+
+.navbar.custom-navbar .navbar-brand {
+  color: white !important;
+}
+
+.navbar.custom-navbar .navbar-toggler-icon {
+  filter: invert(1);
+}
+body {
+  background-color: #80a9beff;
+}

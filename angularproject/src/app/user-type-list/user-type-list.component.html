@@ -1,0 +1,37 @@
+<div class="card my-5">
+  <div class="card-body">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Type</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ut of userTypes">
+              <td>{{ ut.id }}</td>
+              <td>{{ ut.type }}</td>
+              <td>
+                <button
+                  (click)="afficherUserTypeForm(ut.id)"
+                  class="btn btn-info me-3"
+                >
+                  Edit
+                </button>
+                <button
+                  (click)="deleteUserTypeById(ut.id)"
+                  class="btn btn-danger"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

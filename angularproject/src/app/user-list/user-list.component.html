@@ -1,0 +1,48 @@
+<div class="card my-5">
+  <div class="card-body">
+    <div class="row justify-content-center">
+      <div class="col-md-9">
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">
+                Name
+                <!--<button (click)="sortByName()" class="btn btn-info">
+                  sort
+                </button>-->
+              </th>
+              <th scope="col">Email</th>
+              <th scope="col">Type</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let user of users">
+              <td>{{ user.id }}</td>
+              <td>{{ user.name }}</td>
+              <td>
+                <a href="mailto:{{ user.email }}">{{ user.email }}</a>
+              </td>
+              <td>{{ user.userType.type }}</td>
+              <td>
+                <button
+                  (click)="afficherFormationParticipant(user.id)"
+                  class="btn btn-info me-2"
+                >
+                  Edit
+                </button>
+                <button
+                  (click)="deleteUserById(user.id)"
+                  class="btn btn-danger"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
